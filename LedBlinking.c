@@ -63,7 +63,8 @@ total = his.number *6;
 total = RNS.age;
 strcpy (input,RNS.name);//cant use = sign for copying text string to another string variable eg input [10]
    //must use strcpy
-strcpy (input,RNS.NOR);
+strcpy (input,RNS.NOR);  //this is my changed comment an next line
+     TRISA =1;
 
   TRISA = 0;           // set direction to be output
   TRISB = 0;           // set direction to be output
