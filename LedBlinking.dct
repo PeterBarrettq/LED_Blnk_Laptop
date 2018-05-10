@@ -45,6 +45,7 @@ acqt1
 acqt1_bit
 acqt2
 acqt2_bit
+actor
 adcmd
 adcmd_bit
 adcon0
@@ -366,6 +367,7 @@ c5tsel0
 c5tsel0_bit
 c5tsel1
 c5tsel1_bit
+cast
 ccp1
 ccp1_bit
 ccp1as0
@@ -1567,6 +1569,7 @@ res032
 ri
 ri_bit
 rns
+role
 rsen
 rsen_bit
 rsen_ssp1con2_bit
@@ -2060,8 +2063,10 @@ tblptr
 tblptrh
 tblptrl
 tblptru
+temp
 tgen
 tgen_bit
+time
 tmr0h
 tmr0ie
 tmr0ie_bit
@@ -2391,5 +2396,6 @@ wrerr_bit
 wue
 wue_baud1con_bit
 wue_bit
+years
 z
 z_bit

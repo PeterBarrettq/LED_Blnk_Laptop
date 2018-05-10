@@ -1,3 +1,4 @@
 main
 	__CC2DW
 	strcpy
+	Mul_16X16_U

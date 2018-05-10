@@ -25,7 +25,7 @@
  
  #include <stdio.h>
  #include <string.h>        //must tick c string in library manager
- 
+
  struct patient {
   char name [16];
   int age;
@@ -43,13 +43,27 @@
  struct stuff{
 
  char letter;
- int number;
+ int number;                       //
 
 }my,his;
 
+struct oz {
+char actor [18];
+int years;
+char role [16];
+
+} ;
+
+
+              struct oz cast [2] = {      //showng using cast create here records of struct oz.
+               "david", 23, "driver",     // see pages 286  287 "C all in one desk ref"
+               "peter", 35, "doctor"
+              };
+
+ struct oz temp;  //another way of doing struct variable - "temp".
  char input [10];
 
-int total;
+int total,time;
 
 void main() {
 
@@ -58,6 +72,10 @@ void main() {
 his.letter ='f';
 his.number =123;
 my.letter ='p';
+temp.years =120;
+time = cast [0].years;
+strcpy (input, cast [1].role);
+
 
 total = his.number *6;
 total = RNS.age;
@@ -65,6 +83,11 @@ strcpy (input,RNS.name);//cant use = sign for copying text string to another str
    //must use strcpy
 strcpy (input,RNS.NOR);  //this is my changed comment an next line
      TRISA =1;
+
+
+
+
+
 
   TRISA = 0;           // set direction to be output
   TRISB = 0;           // set direction to be output
