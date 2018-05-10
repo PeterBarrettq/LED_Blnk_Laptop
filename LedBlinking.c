@@ -53,6 +53,10 @@ int years;
 char role [16];
 
 } ;
+/*
+cast as record
+
+*/
 
 
               struct oz cast [2] = {      //showng using cast create here records of struct oz.
