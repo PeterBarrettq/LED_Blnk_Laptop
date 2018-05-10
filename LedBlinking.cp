@@ -47,9 +47,23 @@ char * strtok(char * s1, char * s2);
 
 }my,his;
 
+struct oz {
+char actor [18];
+int years;
+char role [16];
+
+} ;
+
+
+ struct oz cast [2] = {
+ "david", 23, "driver",
+ "peter", 35, "doctor"
+ };
+
+ struct oz temp;
  char input [10];
 
-int total;
+int total,time;
 
 void main() {
 
@@ -58,12 +72,22 @@ void main() {
 his.letter ='f';
 his.number =123;
 my.letter ='p';
+temp.years =120;
+time = cast [0].years;
+strcpy (input, cast [1].role);
+
 
 total = his.number *6;
 total = RNS.age;
 strcpy (input,RNS.name);
 
 strcpy (input,RNS.NOR);
+ TRISA =1;
+
+
+
+
+
 
  TRISA = 0;
  TRISB = 0;
