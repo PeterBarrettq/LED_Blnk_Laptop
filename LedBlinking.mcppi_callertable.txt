@@ -2,3 +2,11 @@ main
 	__CC2DW
 	strcpy
 	Mul_16X16_U
+	vEEPROM_Store
+		Equals_Double
+		double2word
+			SETIOV3224
+		Eeprom_Read
+		WordToStr
+			Div_16X16_U
+		Eeprom_Write

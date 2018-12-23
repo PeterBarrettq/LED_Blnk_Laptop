@@ -1,4 +1,4 @@
-#line 1 "C:/Users/peters thinkpad/Documents/GitHub/LED_Blnk_Laptop/LedBlinking.c"
+#line 1 "C:/Users/User/Documents/Repositories/Structz/LED_Blnk_Laptop/LedBlinking.c"
 #line 1 "c:/users/public/documents/mikroelektronika/mikroc pro for pic/include/stdio.h"
 #line 1 "c:/users/public/documents/mikroelektronika/mikroc pro for pic/include/string.h"
 
@@ -25,7 +25,7 @@ char * strpbrk(char * s1, char * s2);
 char * strrchr(char *ptr, char chr);
 char * strstr(char * s1, char * s2);
 char * strtok(char * s1, char * s2);
-#line 29 "C:/Users/peters thinkpad/Documents/GitHub/LED_Blnk_Laptop/LedBlinking.c"
+#line 31 "C:/Users/User/Documents/Repositories/Structz/LED_Blnk_Laptop/LedBlinking.c"
  struct patient {
  char name [16];
  int age;
@@ -43,8 +43,9 @@ char * strtok(char * s1, char * s2);
  struct stuff{
 
  char letter;
- int number;
 
+ int number;
+ struct patient settings ;
 }my,his;
 
 struct oz {
@@ -53,8 +54,7 @@ int years;
 char role [16];
 
 } ;
-
-
+#line 65 "C:/Users/User/Documents/Repositories/Structz/LED_Blnk_Laptop/LedBlinking.c"
  struct oz cast [2] = {
  "david", 23, "driver",
  "peter", 35, "doctor"
@@ -64,11 +64,18 @@ char role [16];
  char input [10];
 
 int total,time;
+double mins =5.5;
+char txt_tmin [6];
+
+
+ void vEEPROM_Store ();
 
 void main() {
 
 
+my.settings.age =21;
 
+strcpy (my.settings.NOR,"NOR");
 his.letter ='f';
 his.number =123;
 my.letter ='p';
@@ -78,17 +85,14 @@ strcpy (input, cast [1].role);
 
 
 total = his.number *6;
+total = total +1;
 total = RNS.age;
 strcpy (input,RNS.name);
 
 strcpy (input,RNS.NOR);
  TRISA =1;
-
-
-
-
-
-
+ vEEPROM_Store ();
+#line 125 "C:/Users/User/Documents/Repositories/Structz/LED_Blnk_Laptop/LedBlinking.c"
  TRISA = 0;
  TRISB = 0;
  TRISC = 0;
@@ -101,13 +105,57 @@ strcpy (input,RNS.NOR);
  LATC = 0x00;
  LATD = 0x00;
  LATE = 0x00;
- Delay_ms(1000);
+ Delay_ms(3000);
 
  LATA = 0xFF;
  LATB = 0xFF;
  LATC = 0xFF;
  LATD = 0xFF;
  LATE = 0xFF;
- Delay_ms(1000);
+ Delay_ms(3000);
  } while(1);
+
+}
+
+void vEEPROM_Store () {
+
+unsigned int tmins_i;
+
+unsigned char low_byte;
+unsigned char high_byte;
+unsigned int Total_Use_min,use1_min,use2_min;
+
+
+
+ do {
+ if ( mins == 5.5){
+ mins =0;
+ }
+
+ tmins_i = mins;
+ use1_min = (unsigned int)EEPROM_read (0x01) <<8;
+ Delay_ms (25);
+ use2_min = EEPROM_read (0x00);
+ Delay_ms (25);
+ if (tmins_i == 0){
+ tmins_i =1;
+ }
+ Total_Use_Min = use1_min + use2_min + tmins_i;
+
+ Total_Use_Min = 40000;
+ WordToStr (Total_Use_Min,txt_tmin);
+
+
+
+ low_byte = (Total_Use_Min & 0x00FF);
+ high_byte = (Total_Use_Min & 0xFF00) >>8;
+
+ EEPROM_Write (0x01,(unsigned short) high_byte);
+ Delay_ms (25);
+ EEPROM_Write (0x00,(unsigned short) low_byte);
+ Delay_ms (25);
+ my.settings.age =22;
+ mins =35;
+ } while (mins !=6);
+
 }

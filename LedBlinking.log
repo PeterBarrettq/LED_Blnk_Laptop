@@ -1,11 +1,12 @@
-0	1	mikroCPIC1618.exe -MSF -DBG -pP18F45K22 -DL -O11111114 -fo32 -N"C:\Users\peters thinkpad\Documents\GitHub\LED_Blnk_Laptop\LedBlinking.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\peters thinkpad\Documents\GitHub\LED_Blnk_Laptop\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -IP"C:\Users\peters thinkpad\Documents\GitHub\LED_Blnk_Laptop\" "LedBlinking.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl"	 
-hint: 0	1139	Available RAM: 1515 [bytes], Available ROM: 32768 [bytes]	 
+0	1	mikroCPIC1618.exe -MSF -DBG -pP18F87K22 -UICD -DL -O11111114 -fo16 -N"C:\Users\User\Documents\Repositories\Structz\LED_Blnk_Laptop\LedBlinking.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -SP"C:\Users\User\Documents\Repositories\Structz\LED_Blnk_Laptop\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\uses\P18\" -IP"C:\Users\User\Documents\Repositories\Structz\LED_Blnk_Laptop\" "LedBlinking.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl" "__Lib_CString.mcl" "__Lib_Conversions.mcl" "__Lib_EEPROM_1024.mcl"	 
+hint: 0	1139	Available RAM: 3841 [bytes], Available ROM: 131072 [bytes]	 
 diagnostics: 0	122	Compilation Started	string.h
-diagnostics: 113	123	Compiled Successfully	LedBlinking.c
-diagnostics: 0	127	All files Compiled in 156 ms	 
-hint: 0	1144	Used RAM (bytes): 158 (10%)  Free RAM (bytes): 1357 (90%)	Used RAM (bytes): 158 (10%)  Free RAM (bytes): 1357 (90%)
-hint: 0	1144	Used ROM (bytes): 552 (2%)  Free ROM (bytes): 32216 (98%)	Used ROM (bytes): 552 (2%)  Free ROM (bytes): 32216 (98%)
+diagnostics: 190	123	Compiled Successfully	LedBlinking.c
+hint: 154	1164	Variable 'high_byte' has been eliminated by optimizer	LedBlinking.c
+diagnostics: 0	127	All files Compiled in 63 ms	 
+hint: 0	1144	Used RAM (bytes): 236 (6%)  Free RAM (bytes): 3605 (94%)	Used RAM (bytes): 236 (6%)  Free RAM (bytes): 3605 (94%)
+hint: 0	1144	Used ROM (bytes): 1532 (1%)  Free ROM (bytes): 129540 (99%)	Used ROM (bytes): 1532 (1%)  Free ROM (bytes): 129540 (99%)
 diagnostics: 0	125	Project Linked Successfully	LedBlinking.mcppi
-diagnostics: 0	128	Linked in 94 ms	 
-diagnostics: 0	129	Project 'LedBlinking.mcppi' completed: 297 ms	 
-diagnostics: 0	103	Finished successfully: 10 May 2018, 22:01:43	LedBlinking.mcppi
+diagnostics: 0	128	Linked in 62 ms	 
+diagnostics: 0	129	Project 'LedBlinking.mcppi' completed: 140 ms	 
+diagnostics: 0	103	Finished successfully: 22 Dec 2018, 15:10:17	LedBlinking.mcppi
